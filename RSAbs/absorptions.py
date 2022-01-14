@@ -23,4 +23,4 @@ def absorptions(spectra_df, wavelength_df, integrity='ASD_CR'):
         absorp_locs = wavelength_array[absorps]
         return pd.Series(absorp_locs) #For normal spectra
     
-    return pd.DataFrame(spectra.apply(abs_features, wavelength_df=wavelength_df, axis=0)) #apply is used because the abs_features function only works for one column at a time, so apply iterates the function through the columns and a new df is created. Returns a dataframe of all absorptions for each spectra/column in spectra_df
+    return pd.DataFrame(spectra_df.apply(abs_features, wavelength_df=wavelength_df, axis=0)) #apply is used because the abs_features function only works for one column at a time, so apply iterates the function through the columns and a new df is created. Returns a dataframe of all absorptions for each spectra/column in spectra_df

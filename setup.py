@@ -8,7 +8,7 @@ setup(
   author = 'MARK RADWIN',  
   author_email = 'markradwin@gmail.com',     
   url = 'https://github.com/radwinskis/RSAbs',  
-  download_url = 'https://github.com/radwinskis/RSAbs/archive/refs/tags/v0.5.tar.gz',   
+  download_url = 'https://github.com/radwinskis/RSAbs/archive/refs/tags/v0.6.tar.gz',   
   keywords = ['REFLECTANCE', 'SPECTROSCOPY', 'ABSORPTION', 'DETECTION'],  
   install_requires=[          
           'scipy',
