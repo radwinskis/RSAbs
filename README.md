@@ -2,7 +2,7 @@
 ## Python package to detect Reflectance Spectroscopy Absorptions (RSAbs)
 
 
-RSAbs is a python package dedicated to easily detecting absorption features for any number of spectra, designed to be used with higher reslution spectral data such as what would be acquired from an ASD spectroradiometer.
+RSAbs is a python package dedicated to easily detecting absorption features for any number of spectra, designed to be used with higher reslution spectral data such as what would be acquired from an ASD spectroradiometer. The main functionality of the package builds off of the scipy.signal.find_peaks package.
 
 
 
@@ -24,10 +24,10 @@ One can install RSAbs using pip or by copying the GitHub repo to their working d
 ```sh
 pip install RSAbs
 ```
-## Usage
+## Function Parameters
 There are two functions which make up the RSAbs package. 
 1) ```sh
-        absorptions(spectra_df, wavelength_df, integrity='ASD_CR') 
+    absorptions(spectra_df, wavelength_df, integrity='ASD_CR') 
     ``` 
 spectra_df: dataframe with spectra as columns
 
@@ -38,7 +38,7 @@ integrity: spectra type, indicates resolution and continuum removal status. Opti
 If you desire compatibility with another sensor/data type, please let me know.
 
 2) ```sh
-        seek_absorptions(absorptions_df, start_wavelength, end_wavelength, wavelength_unit='nanometer') 
+    seek_absorptions(absorptions_df, start_wavelength, end_wavelength, wavelength_unit='nanometer') 
     ```
 absorptions_df: dataframe from absorptions() function
 

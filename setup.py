@@ -1,26 +1,25 @@
 from distutils.core import setup
 setup(
-  name = 'RSAbs',         # How you named your package folder (MyLib)
-  packages = ['RSAbs'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'AUTOMATIC DETECTION OF ABSORPTION FEATURES IN REFLECTANCE SPECTRA',   # Give a short description about your library
-  author = 'MARK RADWIN',                   # Type in your name
-  author_email = 'markradwin@gmail.com',      # Type in your E-Mail
-  url = 'https://github.com/radwinskis/RSAbs',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/radwinskis/RSAbs/archive/refs/tags/v0.3.tar.gz',    # I explain this later on
-  keywords = ['REFLECTANCE', 'SPECTROSCOPY', 'ABSORPTION', 'DETECTION'],   # Keywords that define your package best
-  install_requires=[            # I get to this in a second
-          'scipy.signal',
+  name = 'RSAbs',       
+  packages = ['RSAbs'],   
+  version = '0.4', 
+  license='MIT',  
+  description = 'AUTOMATIC DETECTION OF ABSORPTION FEATURES IN REFLECTANCE SPECTRA', 
+  author = 'MARK RADWIN',  
+  author_email = 'markradwin@gmail.com',     
+  url = 'https://github.com/radwinskis/RSAbs',  
+  download_url = 'https://github.com/radwinskis/RSAbs/archive/refs/tags/v0.4.tar.gz',   
+  keywords = ['REFLECTANCE', 'SPECTROSCOPY', 'ABSORPTION', 'DETECTION'],  
+  install_requires=[          
+          'scipy',
           'pandas',
-          'numpy',
-          'itertools'
+          'numpy'
       ],
   classifiers=[
-    'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
-    'Intended Audience :: Scientists',      # Define that your audience are developers
+    'Development Status :: 3 - Alpha',      # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
+    'Intended Audience :: Scientists',      
     'Topic :: Software Development :: Build Tools',
-    'License :: OSI Approved :: MIT License',   # Again, pick a license
+    'License :: OSI Approved :: MIT License',   
     'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
