@@ -48,7 +48,25 @@ end_wavelength: ending wavelength value for range of interest (larger wavelength
 
 wavelength_unit: specify unit of wavelength. Options: 'nanometer' OR 'micrometer'. PLEASE ensure these are chosen correctly. Default is 'nanometer'.
 
+## Usage 
 
+To use the functions, either import the RSAbs package and use 
+
+```sh
+RSAbs.absorptions(spectra_df, wavelength_df)
+```
+or import the package as
+
+```sh
+from RSAbs import absorptions, seek_absorptions
+```
+
+which will allow for a general call of each function as
+
+```sh
+absorptions(spectra_df, wavelength_df)
+```
+Additionally, ensure the input datasets for the spectra_df and wavelength_df parameters are pandas DataFrames, where the data are separated by columns.
 
 ## License
 
