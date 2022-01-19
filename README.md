@@ -25,11 +25,13 @@ One can install RSAbs using pip or by copying the GitHub repo to their working d
 pip install RSAbs
 ```
 ## Function Parameters
-There are two functions which make up the RSAbs package. 
+There are four functions which make up the RSAbs package. 
 1) ```sh
     absorptions(spectra_df, wavelength_df, integrity='ASD_CR') 
     ``` 
-spectra_df: dataframe with spectra as columns
+Functionality: creates DataFrame of all absorption wavelength positions
+
+spectra_df: dataframe with spectra as columns (leave out wavelength column, if applicable)
 
 wavelength_df: dataframe with wavelength as column
 
@@ -40,6 +42,9 @@ If you desire compatibility with another sensor/data type, please let me know.
 2) ```sh
     seek_absorptions(absorptions_df, start_wavelength, end_wavelength, wavelength_unit='nanometer') 
     ```
+
+Functionality: creates narrowed down DataFrame of absorption wavelength positions in a given wavelength range, and only returns data for samples that contain an absorption in the given range.
+
 absorptions_df: dataframe from absorptions() function
 
 start_wavelength: starting wavelength value for range of interest (smaller wavelength)
@@ -47,6 +52,36 @@ start_wavelength: starting wavelength value for range of interest (smaller wavel
 end_wavelength: ending wavelength value for range of interest (larger wavelength)
 
 wavelength_unit: specify unit of wavelength. Options: 'nanometer' OR 'micrometer'. PLEASE ensure these are chosen correctly. Default is 'nanometer'.
+
+3) ```sh
+    absorptions_depth(spectra_df, integrity='ASD_CR') 
+    ```
+
+Functionality: creates DataFrame of all absorption depths
+
+spectra_df: dataframe with spectra as columns (leave out wavelength column, if applicable)
+
+integrity: spectra type, indicates resolution and continuum removal status. Options: 'ASD_CR' for continuum removed ASD data, 'ASD_normal' for non-continuum-removed ASD data, or 'HyMap_CR' for continuum-removed HyMap data. Default is 'ASD_CR'
+
+4) ```sh
+    seek_absorptions_depth(spectra_df, wavelength_df, integrity='ASD_CR', start_wavelength=350, end_wavelength=2500, wavelength_unit='nanometer') 
+    ```
+
+Functionality: creates narrowed down DataFrame of absorption depths in a given wavelength range,
+and only returns data for samples that contain an absorption in the given wavelength range. 
+
+spectra_df: dataframe with spectra as columns (leave out wavelength column, if applicable)
+
+wavelength_df: dataframe with wavelength as column
+
+integrity: spectra type, indicates resolution and continuum removal status. Options: 'ASD_CR' for continuum removed ASD data, 'ASD_normal' for non-continuum-removed ASD data, or 'HyMap_CR' for continuum-removed HyMap data. Default is 'ASD_CR'
+
+start_wavelength: starting wavelength value for range of interest (smaller wavelength)
+
+end_wavelength: ending wavelength value for range of interest (larger wavelength)
+
+wavelength_unit: specify unit of wavelength. Options: 'nanometer' OR 'micrometer'. PLEASE ensure these are chosen correctly. Default is 'nanometer'.
+
 
 ## Usage 
 
