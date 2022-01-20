@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'RSAbs',       
   packages = ['RSAbs'],   
-  version = '0.8', 
+  version = '0.8.1', 
   license='MIT',  
   description = 'AUTOMATIC DETECTION OF ABSORPTION FEATURES IN REFLECTANCE SPECTRA', 
   author = 'MARK RADWIN',  
   author_email = 'markradwin@gmail.com',     
   url = 'https://github.com/radwinskis/RSAbs',  
-  download_url = 'https://github.com/radwinskis/RSAbs/archive/refs/tags/v0.8.tar.gz',   
+  download_url = 'https://github.com/radwinskis/RSAbs/archive/refs/tags/v0.8.1.tar.gz',   
   keywords = ['REFLECTANCE', 'SPECTROSCOPY', 'ABSORPTION', 'DETECTION'],  
   install_requires=[          
           'scipy',
